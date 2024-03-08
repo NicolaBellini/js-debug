@@ -56,23 +56,31 @@ const cars = [
         manufacturer: 'Seat',
         model: 'Ibiza',
         type: 'metano'
-    }
+    },
     {
         manufacturer: 'Audi',
         model: 'R8',
         type: 'Benzina'
     },
 ];
+console.log(cars.length);
+// mancava la virgola
 
-const gasolineCars = cars.filter( (auto) >= auto.type === 'benzina');
+const gasolineCars = cars.filter((auto) => auto.type.toLowerCase() === 'benzina');
+console.log(gasolineCars);
+// la freccia era scritta sbagliata, prendeva solo il type con scritto Benzina
 
-const dieselCars = cars.filter( (auto) => {
-    auto.type === 'diesel';
+
+const dieselCars = cars.filter((auto) => auto.type.toLowerCase() === 'diesel');
+console.log(dieselCars);
+// prendeva solo il type scritto diesel
+
+const otherCars = cars.filter((auto) => {
+    const lowerCaseType = auto.type.toLowerCase();
+    return lowerCaseType !== 'benzina' && lowerCaseType !== 'diesel';
 });
 
-const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' || auto.type !== 'diesel';
-});
+console.log(otherCars);
 
 console.log('Auto a benzina');
 console.log('*******************************');
