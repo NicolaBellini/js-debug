@@ -29,7 +29,8 @@ function addIfEven(num) {
 console.log(addIfEven(4));
 
 // funziona
-// servivano i 3 uguali al posto di uno SVGFEColorMatrixElement, in modo da essere in modalità comparazione e non scrittura
+// non viene invocata   
+// servivano i 3 uguali al posto di uno solo, in modo da essere in modalità comparazione e non scrittura
 
 
 
@@ -38,15 +39,14 @@ function loopToFive() {
     for (let i = 0; i < 5; i++) {
         console.log(i);
     }
-}
+}                 
 
-loopToFive();
+loopToFive(); 
 
 // funziona
-// servivano i ; al posto delle ,
+// servivano i ; al posto delle , e non viene invocata       
 
-
-
+     
 
 // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
 function displayEvenNumbers() {
@@ -56,7 +56,7 @@ function displayEvenNumbers() {
         if ((numbers[i] % 2)===0) {
             evenNumbers.push(numbers[i]);
         }
-    }
+    }       
     return evenNumbers;
 }
 
